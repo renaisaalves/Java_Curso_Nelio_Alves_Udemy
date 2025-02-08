@@ -1,11 +1,17 @@
 package exercicios;
 
+import java.util.Scanner;
+
 public class EntradaDeDados {
 	
 	public static void main(String[] args) {
 		
-		String name = "Renaisa";
-		System.out.printf("Boa menina, %s", name);
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Qual é o seu nome?");
+		String name = scan.next();
+		System.out.printf("Boa menina, %s.", name);
+		scan.close();
 	}
 
 }
