@@ -4,10 +4,10 @@ public class EntradaDados {
 
 	public static void main(String[] args) {
 		
-		Scanner scanner = new Scanner(System.in);
+		Scanner scan= new Scanner(System.in);
 		System.out.println("Digite um número: ");
-		int numero = scanner.nextInt();
-		scanner.close();
+		int numero = scan.nextInt();
+		scan.close();
 		
 		if (numero > 10) {
 			String mensagem = "Número maior que 10";
@@ -15,7 +15,6 @@ public class EntradaDados {
 		} else {
 			System.out.println("Número menor que 10");
 		}
-		
 		
 	}
 
