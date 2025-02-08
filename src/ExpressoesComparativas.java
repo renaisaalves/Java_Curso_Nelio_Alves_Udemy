@@ -7,8 +7,8 @@ public class ExpressoesComparativas {
 		Scanner scan = new Scanner(System.in);
 		
 		boolean value1 = 5 <= 10 && 3 >= 0;
-		boolean value2 = !(5 == 10);
-		boolean value3 = 4 != 4 || 12 == 9;
+		boolean value2 = !(5 != 10);
+		boolean value3 = 4 != 3 || (12 + 23) <= 40;
 		
 		System.out.println(value1);
 		System.out.println(value2);
