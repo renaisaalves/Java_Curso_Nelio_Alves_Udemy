@@ -15,6 +15,7 @@ public class FuncionamentoDoScanner {
 		String s1, s2, s3;
 		
 		int idade = scan.nextInt();
+		scan.nextLine(); // extra para não consumir a variável s1
 		s1 = scan.nextLine();
 		s2 = scan.nextLine();
 		s3 = scan.nextLine();
@@ -27,8 +28,7 @@ public class FuncionamentoDoScanner {
 		System.out.println(s2);
 		System.out.println(s3);
 		
-		// Além disso, existe um problema quando o tipo de dado inserido vêm antes do tipo String e não é do tipo String. 
-
+		// Além disso, existe um problema quando o tipo de dado inserido vêm antes do tipo String e não é do tipo String. Perceba que no exemplo acima, a primeira variável declarada é do tipo int. Ao inserir o número, o enter consome a linha que é ocupada pela primeira variável do tipo String (s1). A solução então seria inserir um next extra. 
 		
 		scan.close();
 
