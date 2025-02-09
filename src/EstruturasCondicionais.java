@@ -1,8 +1,8 @@
-package exercicios;
+
 
 import java.util.Scanner;
 
-public class ExercicioEstruturasCondicionais {
+public class EstruturasCondicionais {
 
 	public static void main(String[] args) {
 		
@@ -22,8 +22,7 @@ public class ExercicioEstruturasCondicionais {
 		
 		
 		
-		
-		
+	
 		scan.close();
 
 	}
