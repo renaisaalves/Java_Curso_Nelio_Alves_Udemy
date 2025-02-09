@@ -1,8 +1,8 @@
-package exercicios;
+
 
 import java.util.Locale;
 
-public class ExercicioFormatacao {
+public class Formatacao {
 
 	public static void main(String[] args) {
 		
