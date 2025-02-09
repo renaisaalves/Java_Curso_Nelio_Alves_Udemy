@@ -3,7 +3,7 @@ package exerciciosSequenciais;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class Exercicio4 {
+public class Exercicio4S {
 
 	public static void main(String[] args) {
 		
