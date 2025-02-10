@@ -10,18 +10,19 @@ public class Exercicio4CL {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int horaInicial = scan.nextInt();
 		System.out.print("Hora Inicial: ");
-		int horaFinal = scan.nextInt();
+		int horaInicial = scan.nextInt();
 		System.out.print("Hora Final: ");
+		int horaFinal = scan.nextInt();
 		
+		int horaTotal;
 		if (horaInicial < horaFinal) {
-			int horaTotal = horaFinal - horaInicial;
-			System.out.println("Horas de jogo: " + horaTotal);
+			horaTotal = horaFinal - horaInicial;
 		} else {
-			int horaTotal = horaInicial - horaFinal;
-			System.out.println("Horas de jogo: " + horaTotal);
+			horaTotal = (24 - horaInicial) + horaFinal;
 		}
+		
+		System.out.println("Horas de jogo: " + horaTotal + "h");
 		
 		scan.close();
 

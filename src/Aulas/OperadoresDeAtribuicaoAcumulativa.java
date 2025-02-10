@@ -12,7 +12,7 @@ public class OperadoresDeAtribuicaoAcumulativa {
 		
 		double conta = 50.00;
 		if  (minutos  > 100) {
-			conta = conta + (minutos - 100) * 2.0; // conta = conta + pode ser substituído por conta += conta
+			conta += (minutos - 100) * 2.0; // conta = conta + pode ser substituído por conta += conta
 			
 		}
 		
