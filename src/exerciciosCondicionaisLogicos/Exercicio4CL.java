@@ -15,7 +15,13 @@ public class Exercicio4CL {
 		int horaFinal = scan.nextInt();
 		System.out.print("Hora Final: ");
 		
-		//16 2 = 10h de jogo; 2 16 = 14h de jogo 
+		if (horaInicial < horaFinal) {
+			int horaTotal = horaFinal - horaInicial;
+			System.out.println("Horas de jogo: " + horaTotal);
+		} else {
+			int horaTotal = horaInicial - horaFinal;
+			System.out.println("Horas de jogo: " + horaTotal);
+		}
 		
 		scan.close();
 
