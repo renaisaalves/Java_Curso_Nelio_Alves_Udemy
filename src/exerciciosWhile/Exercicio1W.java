@@ -9,12 +9,14 @@ public class Exercicio1W {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		System.out.print("Crie uma senha: ");
 		int senha = scan.nextInt();
 		
+		System.out.print("Insira a senha: ");
 		int senhaInserida = scan.nextInt();
 		
 		while (senhaInserida != senha) {
-			System.out.println("Senha inválida. Digite novamente: ");
+			System.out.print("Senha inválida. Digite novamente: ");
 			senhaInserida = scan.nextInt();
 		}
 		
