@@ -18,8 +18,12 @@ public class EstruturasRepetitivasFor {
 		
 		System.out.println(soma);
 		
-		for (int i=0; i>=0; i--) {
-			System.out.println("Valor de i: ");
+		for (int i=0; i<=4; i++) {
+			System.out.println("Valor de i: " + i);
+		}
+		
+		for (int i=4; i>=0; i--) {
+			System.out.println("Valor de i: " + i);
 		}
 		
 		scan.close();
