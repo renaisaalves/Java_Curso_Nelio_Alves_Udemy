@@ -1,9 +1,28 @@
 package Aulas;
 
+import java.util.Scanner;
+
 public class EstruturasRepetitivasFor {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int n = scan.nextInt();
+		int soma = 0;
+		
+		for (int i=0; i<n; i++) {
+			int x = scan.nextInt();
+			soma = soma + x;
+		}
+		
+		System.out.println(soma);
+		
+		for (int i=0; i>=0; i--) {
+			System.out.println("Valor de i: ");
+		}
+		
+		scan.close();
 
 	}
 
