@@ -1,11 +1,13 @@
 package exerciciosERFor;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio3For {
 
 	public static void main(String[] args) {
-
+		
+		Locale.setDefault(Locale.US);
 		Scanner scan = new Scanner(System.in);
 
 		// 3) Leia 1 valor inteiro N, que representa o número de casos de teste que vem
@@ -20,13 +22,13 @@ public class Exercicio3For {
 			double value1 = scan.nextDouble();
 			double value2 = scan.nextDouble();
 			double value3 = scan.nextDouble();
-			double mediaP1 = value1 * 2;
-			double mediaP2 = value2 * 3;
-			double mediaP3 = value3 * 5;
+			value1 = value1 * 2.0;
+			value2 = value2 * 3.0;
+			value3 = value3 * 5.0;
 			double soma = value1 + value2 + value3;
 			double media = soma / 10;
 			
-			System.out.printf("Media: %.2f");
+			System.out.printf("Media: %.1f", media);
 		}
 
 		scan.close();
