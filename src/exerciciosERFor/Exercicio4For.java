@@ -15,7 +15,13 @@ public class Exercicio4For {
 		int n = scan.nextInt();
 
 		for (int i= 0; i<n; i++) {
-
+			double n1 = scan.nextDouble();
+			double n2 = scan.nextDouble();
+			double divisao = n1 / n2;
+			//if (divisao == 0) {
+			//	System.out.println("Divisão impossível");
+			//	}
+			System.out.println(divisao);
 		}
 		
 		
