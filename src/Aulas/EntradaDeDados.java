@@ -1,6 +1,4 @@
 package Aulas;
-
-
 import java.util.Scanner;
 
 public class EntradaDeDados {
