@@ -12,8 +12,15 @@ public class Exercicio4For {
 		// mostre a divisão do primeiro pelo segundo. Se o denominador for igual a zero,
 		// mostrar a mensagem "divisao impossivel".
 
-		scan.close();
+		int n = scan.nextInt();
 
+		for (int i= 0; i<n; i++) {
+
+		}
+		
+		
+		
+		scan.close();
 	}
 
 }
