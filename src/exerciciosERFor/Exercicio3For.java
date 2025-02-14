@@ -13,6 +13,21 @@ public class Exercicio3For {
 		// uma casa decimal. Apresente a média ponderada para cada um destes conjuntos
 		// de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor tem peso
 		// 3 e o terceiro valor tem peso 5.
+		
+		int n = scan.nextInt();
+		
+		for (int i=0; i<n; i++) {
+			double value1 = scan.nextDouble();
+			double value2 = scan.nextDouble();
+			double value3 = scan.nextDouble();
+			double mediaP1 = value1 * 2;
+			double mediaP2 = value2 * 3;
+			double mediaP3 = value3 * 5;
+			double soma = value1 + value2 + value3;
+			double media = soma / 10;
+			
+			System.out.printf("Media: %.2f");
+		}
 
 		scan.close();
 
