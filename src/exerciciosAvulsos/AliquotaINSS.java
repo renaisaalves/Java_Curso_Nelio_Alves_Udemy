@@ -26,9 +26,9 @@ public class AliquotaINSS {
 			categoriaEspecie = scan.next().charAt(0);
 		} // Enquanto a resposta não for Individual ou Facultativo, o programa não prosseguirá para a próxima etapa.
 		
-		System.out.print("Qual alíquota você deseja recolher?\nResposta: ");
+		System.out.print("\nQual alíquota você deseja recolher?\nResposta: ");
 		
-		if (categoriaEspecie == 'i' && categoriaEspecie == 'I') {
+		if (categoriaEspecie == 'i' || categoriaEspecie == 'I') {
 			int aliquota = scan.nextInt();
 			while(aliquota != 20 && aliquota != 11) {
 				System.out.print("\nAlíquota incorreta. Digite novamente: ");
