@@ -50,17 +50,9 @@ public class AliquotaINSS {
 		} else if (aliquota == 11) {
 			valor = 11 * salarioMin / 100;
 		} else {
-			
+			valor = 5 * salarioMin / 100;
 		}
 		System.out.printf("O valor da parcela a ser paga é %nR$%.2f", valor);
-		/*
-		 * System.out.print("Salário de contribuição R$: "); 
-		 * double valorInfo = scan.nextDouble(); 
-		 * double salarioMin = 1518.00; 
-		 * double aliquota20 = 20 * valorInfo / 100; 
-		 * double aliquota11 = 11 * salarioMin / 100; 
-		 * double aliquota5 = 5 * salarioMin / 100;
-		 */
 
 		scan.close();
 
