@@ -13,7 +13,7 @@ public class AliquotaINSS {
 		double salarioMin = 1518.00;
 		double salarioContribuicao;
 		double parcela;
-		
+		int codigo;
 		
 		System.out.println("Contribuinte Individual:\nCódigo 1007 [20%]\nCódigo 1163 [11%]\n");
 		System.out.println("Contribuinte Facultativo:\nCódigo 1406 [20%]\nCódigo 1473 [11%]\nCódigo 1929 [5%]\n");
@@ -31,36 +31,41 @@ public class AliquotaINSS {
 		if (categoriaEspecie == 'i' && categoriaEspecie == 'I') {
 			int aliquota = scan.nextInt();
 			while(aliquota != 20 && aliquota != 11) {
-				System.out.print("Alíquota incorreta. Digite novamente: ");
+				System.out.print("\nAlíquota incorreta. Digite novamente: ");
 				aliquota = scan.nextInt();
 			}
 			if (aliquota == 20) {
-				System.out.print("Sobre qual salário você deseja contribuir?\nResposta: R$");
+				codigo = 1007;
+				System.out.print("\nSobre qual salário você deseja contribuir?\nResposta: R$");
 				salarioContribuicao = scan.nextDouble();
 				parcela = 20 * salarioContribuicao / 100;
 			} else {
+				codigo = 1163;
 				parcela = 11 * salarioMin / 100;
 			}
 			
 		} else {
 			int aliquota = scan.nextInt();
 			while(aliquota != 20 && aliquota != 11 && aliquota != 5) {
-				System.out.print("Alíquota incorreta. Digite novamente: ");
+				System.out.print("\nAlíquota incorreta. Digite novamente: ");
 				aliquota = scan.nextInt();
 			}
 			if (aliquota == 20) {
-				System.out.print("Sobre qual salário você deseja contribuir?\nResposta: R$");
+				codigo = 1406;
+				System.out.print("\nSobre qual salário você deseja contribuir?\nResposta: R$");
 				salarioContribuicao = scan.nextDouble();
 				parcela = 20 * salarioContribuicao / 100;
 			} else if (aliquota == 11) {
+				codigo = 1473;
 				parcela = 11 * salarioMin / 100;
 			} else {
+				codigo = 1929;
 				parcela = 5 * salarioMin / 100;
 			}
 		}
 		
-		System.out.printf("O valor da parcela é R$%.%n", parcela);
-		System.out.print("Está dando certo");
+		System.out.printf("\nCódigo: %d%nValor: R$%.2f%n", codigo, parcela);
+		
 		scan.close();
 
 	}
