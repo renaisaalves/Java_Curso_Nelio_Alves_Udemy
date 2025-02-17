@@ -31,18 +31,30 @@ public class AliquotaINSS {
 		System.out.println("CÁLCULO DA GUIA PREVIDÊNCIA SOCIAL (GPS)");
 		System.out.print("Você trabalha como autônomo? (por conta própria)\nR: ");
 		char resp = scan.next().charAt(0);
+		
+		
+		
+		
 		if (resp == 's' || resp == 'S') {
 			System.out.println("Então você se enquadra na categoria Contribuinte Individual\n");
-		} else {
+			System.out.print("Qual alíquota deseja recolher?\n[20%] [11%]: ");
+			int aliquota = scan.nextInt();
+			while (aliquota != 20 && aliquota != 11) {
+					System.out.print("Valor inválido\nDigite novamente: ");
+					aliquota = scan.nextInt();
+				}
+		} else if (resp == 'n' || resp == 'N'){
 			System.out.println("Então você se enquadra na categoria Contribuinte Facultativo\n");
+			System.out.print("Qual alíquota deseja recolher?\n[20%] [11%] [5%]: ");
+			int aliquota = scan.nextInt();
+			while (aliquota != 20 && aliquota != 11 & aliquota != 5) {
+					System.out.print("Valor inválido\nDigite novamente: ");
+					aliquota = scan.nextInt();
+				}
 		}
 		
-		System.out.print("Qual alíquota deseja recolher?\n[20%] [11%]: ");
-		int aliquota = scan.nextInt();
-		while (aliquota != 20 && aliquota != 11) {
-				System.out.print("Valor inválido\nDigite novamente: ");
-				aliquota = scan.nextInt();
-			}
+		
+
 		if (aliquota == 20) {
 			System.out.print("Sobre qual salário de contribuição deseja recolher?\nR: ");
 			double salarioInfo = scan.nextDouble();
@@ -52,7 +64,7 @@ public class AliquotaINSS {
 		} else {
 			valor = 5 * salarioMin / 100;
 		}
-		System.out.printf("O valor da parcela a ser paga é %nR$%.2f", valor);
+		System.out.printf("O valor da parcela a ser paga é R$%.2f", valor);
 
 		scan.close();
 
