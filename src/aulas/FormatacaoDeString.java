@@ -24,7 +24,7 @@ public class FormatacaoDeString {
 		System.out.println("original: • " + name + "•");
 		System.out.println("toLowerCase: • " + s1 + "•");
 		System.out.println("toUpperCase: • " + s2 + "•");
-		System.out.println("trim: • " + s3 + "•");
+		System.out.println("trim:•" + s3 + "  •   ");
 		System.out.println("substring (inicio): • " + s4 + "•");
 		System.out.println("substring (inicio, fim): • " + s5 + "•");
 		System.out.println("Replace: • " + s6 + "•");
