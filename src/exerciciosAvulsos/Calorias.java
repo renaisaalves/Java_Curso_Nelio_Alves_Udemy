@@ -10,24 +10,33 @@ public class Calorias {
 		Locale.setDefault(Locale.US);
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("CONTADOR DE CALORIAS");
-
+		double totCalories = 0;
 		char resp;
+		
 		do {
-			System.out.print("Nome do alimento: ");
-			String food = scan.next().toUpperCase();
-			System.out.print("Peso: ");
-			double peso = scan.nextDouble();
+			System.out.print("Alimento: ");
+			String food = scan.nextLine().toUpperCase();
+			System.out.print("Gramas: ");
+			double mg = scan.nextDouble();
 			System.out.print("Calorias: ");
 			double calories = scan.nextDouble();
 			System.out.print("Quantidade: ");
 			int quant = scan.nextInt();
-
-			System.out.print("\nDeseja adicionar mais algum alimento?");
+			if (quant > 1) {
+				mg *= quant;
+				calories *= quant;
+			}
+			System.out.format("\nAlimento: %s%nPeso: %.0f gramas%nCalorias: %.0fkcal\n", food, mg, calories);
+			for (int i=0; i<quant; i++) {
+				totCalories = calories;
+			}
+			
+			System.out.print("Adicionar mais um alimento?\n[Sim/Não]: ");
 			resp = scan.next().charAt(0);
-		} while (resp == 's' || resp == 'S');
+		} while (resp == 'S' || resp == 's');
+		
 
-		System.out.printf("\nAlimento(s): %s%nQuantidade: %d%nCalorias: %.2fkcal%n", food, quant, calories);
+		System.out.printf("Total de calorias: %.0fkcal", totCalories);
 
 		scan.close();
 	}
