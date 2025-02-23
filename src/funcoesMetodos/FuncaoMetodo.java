@@ -1,4 +1,4 @@
-package FuncoesMetodos;
+package funcoesMetodos;
 
 import java.util.Scanner;
 
