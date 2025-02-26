@@ -3,7 +3,7 @@ package exerciciosAvulsos;
 import java.util.Scanner;
 import classes.classeCachorro;
 
-public class Animal {
+public class AnimalCachorro {
 
 	public static void main(String[] args) {
 		
