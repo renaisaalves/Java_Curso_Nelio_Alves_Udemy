@@ -11,9 +11,18 @@ public class Apaixonada {
 		System.out.print("Você está apaixonada?\nResposta:");
 		char resposta = scan.next().charAt(0);
 		
+		cupidoApaixonado(resposta);
 		
 		
 		scan.close();
+	}
+
+	public static void cupidoApaixonado(char amor) {
+		if (amor == 's' || amor == 'S') {
+			System.out.println("Você está apaixonada");
+		} else {
+			System.out.println("Você não está apaixonada.");
+		}
 	}
 
 }
