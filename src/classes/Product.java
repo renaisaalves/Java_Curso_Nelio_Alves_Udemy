@@ -6,15 +6,16 @@ public class Product {
 	public double price;
 	public int quantity;
 	
-	public double TotalValueInStock() {
-		return;
+	public double totalValueInStock() {
+		return price * quantity;
 	}
 	
-	public void AddProducts(int quantity) {
-		
-	}
+	public void addProducts(int quantity) {
+		this.quantity += quantity;
+	}   //this serve para fazer referência ao atributo e não ao parâmetro;
 	
-	public void RemoveProducts(int quantity) {
+	public void removeProducts(int quantity) {
+		this.quantity -= quantity;
 		
 	}
 
