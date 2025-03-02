@@ -26,7 +26,7 @@ public class AnimalCachorro {
 		dog1.corPelagem = scan.next();
 		
 		
-		System.out.printf("", dog1.nome, dog1.raça, dog1.porte, dog1.sexo, dog1.idade, dog1.corPelagem);
+		System.out.printf("Nome: %s%nRaça: %s%nPorte: %s%nSexo: %s%nIdade: %d%nColoração: %s%n", dog1.nome, dog1.raça, dog1.porte, dog1.sexo, dog1.idade, dog1.corPelagem);
 		
 		scan.close();
 		
