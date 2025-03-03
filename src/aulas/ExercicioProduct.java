@@ -14,14 +14,14 @@ public class ExercicioProduct {
 		
 		Product produto = new Product();
 		
-		System.out.println("Nome do produto: ");
+		System.out.print("Nome do produto: ");
 		produto.name = scan.nextLine();
-		System.out.println("Preço: ");
+		System.out.print("Preço: ");
 		produto.price = scan.nextDouble();
-		System.out.println("Quantidade no estoque: ");
+		System.out.print("Quantidade no estoque: ");
 		produto.quantity = scan.nextInt();
 		
-		System.out.println(produto.name + "," + produto.price + "," + produto.quantity);
+		System.out.println(produto.toString());
 		
 		scan.close();
 

@@ -1,6 +1,6 @@
 package classes;
 
-public class classeCachorro {
+public class CasseCachorro {
 	
 	public String nome;
 	public String raça;

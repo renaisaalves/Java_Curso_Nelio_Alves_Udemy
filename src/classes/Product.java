@@ -12,11 +12,15 @@ public class Product {
 	
 	public void addProducts(int quantity) {
 		this.quantity += quantity;
-	}   //this serve para fazer referência ao atributo e não ao parâmetro;
+	}   //this serve para fazer referência ao atributo/objeto e não ao parâmetro;
 	
 	public void removeProducts(int quantity) {
 		this.quantity -= quantity;
 		
+	}
+	
+	public String toString() {
+		return "Produto: " + name.toUpperCase() + "\nPreço: R$" + price + "\nQuantidade: " + quantity + "\nTotal R$: " + totalValueInStock();
 	}
 
 }
