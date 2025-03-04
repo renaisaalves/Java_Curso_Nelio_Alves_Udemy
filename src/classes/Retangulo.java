@@ -11,7 +11,7 @@ public class Retangulo {
 	}
 	
 	public double perimeter() {
-		double p = 2 * (width * height);
+		double p = 2 * (width + height);
 		return p;
 	}
 	
@@ -22,8 +22,9 @@ public class Retangulo {
 		
 	}
 	
-	public String toString(String result) {
-		return "Altura: %.1f%n" + area() + "Largura: %1.f%n" + perimeter() + "Diagonal: %1.f%n" + diagonal();
+	public void retorno() {
+		System.out.printf("\nÁrea: %.2f%nPerímetro: %.2f%nDiagonal: %.2f%n", area(), perimeter(), diagonal());
+				
 	}
 
 }

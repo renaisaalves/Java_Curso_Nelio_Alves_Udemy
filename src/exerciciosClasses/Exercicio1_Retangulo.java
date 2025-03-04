@@ -22,7 +22,7 @@ public class Exercicio1_Retangulo {
 		System.out.print("Altura: ");
 		calRetangulo.height = scan.nextDouble();
 		
-		System.out.printf("Área: %.2f%nPerímetro: %.2f%nDiagonal: %.2f%n", calRetangulo.area(), calRetangulo.perimeter(), calRetangulo.diagonal());
+		calRetangulo.retorno();
 		
 		scan.close();
 
