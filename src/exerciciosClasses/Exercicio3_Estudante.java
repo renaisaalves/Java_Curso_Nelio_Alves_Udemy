@@ -17,7 +17,8 @@ public class Exercicio3_Estudante {
 		Estudante aluno = new Estudante();
 		
 		System.out.print("Nome: ");
-		aluno.nome = scan.next();
+		aluno.nome = scan.nextLine();
+		
 		System.out.print("Nota 1º trimestre: ");
 		aluno.primeiroTrimestre = scan.nextInt();
 		
