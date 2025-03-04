@@ -1,6 +1,6 @@
 package classes;
 
-public class ClasseTriangulo {
+public class Triangulo {
 	//Atributos
 	public double a;
 	public double b;

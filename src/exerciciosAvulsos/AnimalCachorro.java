@@ -1,7 +1,7 @@
 package exerciciosAvulsos;
 
 import java.util.Scanner;
-import classes.CasseCachorro;
+import classes.Cachorro;
 
 public class AnimalCachorro {
 
@@ -9,8 +9,8 @@ public class AnimalCachorro {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		CasseCachorro dog1;
-		dog1 = new CasseCachorro();
+		Cachorro dog1;
+		dog1 = new Cachorro();
 		
 		System.out.print("Nome: ");
 		dog1.nome = scan.nextLine();

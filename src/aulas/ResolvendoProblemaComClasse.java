@@ -3,7 +3,7 @@ package aulas;
 import java.util.Locale;
 import java.util.Scanner;
 
-import classes.ClasseTriangulo;
+import classes.Triangulo;
 
 public class ResolvendoProblemaComClasse {
 
@@ -12,9 +12,9 @@ public class ResolvendoProblemaComClasse {
 		Locale.setDefault(Locale.US);
 		Scanner scan = new Scanner(System.in);
 		
-		ClasseTriangulo x, y;
-		x = new ClasseTriangulo();
-		y = new ClasseTriangulo();
+		Triangulo x, y;
+		x = new Triangulo();
+		y = new Triangulo();
 		
 		System.out.println("Enter the measures of triangle X: ");
 		x.a = scan.nextDouble();
