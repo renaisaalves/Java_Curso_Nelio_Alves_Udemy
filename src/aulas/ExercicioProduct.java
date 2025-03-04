@@ -16,10 +16,20 @@ public class ExercicioProduct {
 		
 		System.out.print("Nome do produto: ");
 		produto.name = scan.nextLine();
+		
 		System.out.print("Preço: ");
 		produto.price = scan.nextDouble();
+		
 		System.out.print("Quantidade no estoque: ");
 		produto.quantity = scan.nextInt();
+		
+		System.out.print("Adicionar produto: ");
+		int addProduto = scan.nextInt();
+		produto.addProducts(addProduto);
+		
+		System.out.print("Remover produto: ");
+		int removeProduto = scan.nextInt();
+		produto.removeProducts(removeProduto);
 		
 		System.out.println(produto.toString());
 		
