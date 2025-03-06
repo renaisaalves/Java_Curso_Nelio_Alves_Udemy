@@ -21,13 +21,6 @@ public class CalculoGPS {
 		System.out.print("Alíquota: " );
 		calculoGPS.aliquota = scan.nextInt();
 		
-		if (calculoGPS.aliquota == 20) {
-			System.out.print("Salário de contribuição R$: ");
-			double salario = scan.nextDouble();
-			calculoGPS.calculadora20(salario);
-			System.out.printf("Taxa de contribuição: R$%.2f%n", calculoGPS.calculadora20(salario));
-		}
-		
 		System.out.printf("Taxa de contribuição: R$%.2f%n", calculoGPS.calculadora());
 		
 		
