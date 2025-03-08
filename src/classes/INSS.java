@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class INSS {
 	
-	public int categoriaContribuinte;
+	public int categoriaContribuinte; //com STATIC não precisa criar objeto, pois static significa que pode ser compartilhado por todos
 	public int aliquota;
 	public double salarioMinimo = 1518.00;
 	double taxaContribuicao;
@@ -22,6 +22,7 @@ public class INSS {
 	       } else {
 	       		taxaContribuicao = aliquota * salarioMinimo / 100;
 	       }
+	  		
 	       return taxaContribuicao;
 	}
 }

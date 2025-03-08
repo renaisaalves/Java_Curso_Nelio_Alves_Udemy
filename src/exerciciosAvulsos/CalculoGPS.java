@@ -23,7 +23,6 @@ public class CalculoGPS {
 		
 		System.out.printf("Taxa de contribuição: R$%.2f%n", calculoGPS.calculadora());
 		
-		
 		scan.close();
 
 	}
