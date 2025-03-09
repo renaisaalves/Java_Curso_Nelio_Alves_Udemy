@@ -6,11 +6,17 @@ public class ProductUsandoConstrutor {
 		public double price;
 		public int quantity;
 		
-		//Criando um construtor 
+		//Construtor personalizado 
 		public ProductUsandoConstrutor(String name, double price, int quantity) {
 			this.name = name;
 			this.price = price;
 			this.quantity = quantity;
+		}
+		
+		//Sobrecarga = Construtores com o mesmo nome, mas com parâmetros diferentes
+		public ProductUsandoConstrutor(String name, double price) {
+			this.name = name;
+			this.price = price;
 		}
 		
 		public double totalValueInStock() {
@@ -27,7 +33,7 @@ public class ProductUsandoConstrutor {
 		}
 		
 		public String toString() {
-			return "Produto: " + name.toUpperCase() + "\nPreço: R$" + price + "\nQuantidade: " + quantity + "\nTotal R$: " + totalValueInStock();
+			return "Produto: " + name.toUpperCase() + ", Preço: R$" + price + ", Quantidade: " + quantity + ", Total R$: " + totalValueInStock();
 		}
 
 }
