@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Banco {
 	
+	Scanner scan = new Scanner(System.in);
+		
 	private int numConta;
 	private String nomeTitular;
 	private double deposito = 0.0;
@@ -27,35 +29,39 @@ public class Banco {
 		this.nomeTitular = nomeTitular;
 	}
 	
-	public static double valorDeposito() {
-		Scanner scan = new Scanner(System.in);
+	public double valorDeposito() {
 		Locale.setDefault(Locale.US);
-		
 		System.out.print("Valor do depósito R$: ");
 		double valor = scan.nextDouble();
-		scan.close();
 		return valor;
 	} 
 	
-	public int getnumConta() {
+	public int getNumConta() {
 		return numConta;
 	}
 	
-	public String getnomeTitular() {
+	public String getNomeTitular() {
 		return nomeTitular;
 	}
 	
-	public double getdeposito() {
+	public double getDeposito() {
 		return deposito;
 	}
 	
-	public void setdeposito(double deposito) {
+	public void setDeposito(double deposito) {
 		this.deposito = deposito;
+		
 	}
 	
-	public void exibirTela() {
-		System.out.printf("%nNúmero da conta: %d | Titular: %s | Valor depositado R$: %.2f%n", numConta, nomeTitular, deposito);
+	public void addDeposito (double deposito) {
+		this.deposito += deposito;
 	}
 	
-
+	public void removeDeposito (double deposito) {
+		 if (this.deposito >= deposito) {
+		        this.deposito -= deposito;
+		    } else {
+		        System.out.println("Saldo insuficiente!");
+		    }
+	}
 }
