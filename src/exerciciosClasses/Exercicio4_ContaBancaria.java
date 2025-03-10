@@ -22,17 +22,16 @@ public class Exercicio4_ContaBancaria {
 		char respDeposito = scan.next().charAt(0);
 		
 		Banco rayssa = new Banco(numConta, nomeTitular, respDeposito);
-		System.out.printf("%nNúmero da conta: %d | Titular: %s | Valor depositado R$: %.2f%n", numConta, nomeTitular, rayssa.getDeposito());
 		
-		System.out.print("Adicionar depósito R$: ");
+		rayssa.exibirSaldo();
+		
+		System.out.print("\nAdicionar saldo R$: ");
 		double addValor = scan.nextDouble();
 		rayssa.addDeposito(addValor);
-		System.out.printf("%nNúmero da conta: %d | Titular: %s | Valor adicionado R$: %.2f%n", numConta, nomeTitular, rayssa.getDeposito());
 		
-		System.out.print("Remover depósito R$: ");
+		System.out.print("\nRemover saldo R$: ");
 		double removeValor = scan.nextDouble();
 		rayssa.removeDeposito(removeValor);
-		System.out.printf("%nNúmero da conta: %d | Titular: %s | Valor removido R$: %.2f%n", numConta, nomeTitular, rayssa.getDeposito());
 		
 		scan.close();
 

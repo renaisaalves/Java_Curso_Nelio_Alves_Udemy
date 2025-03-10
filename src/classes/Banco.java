@@ -15,23 +15,16 @@ public class Banco {
 	}
 	
 	public Banco(int numConta, String nomeTitular, char respDeposito) {
-		
 		this.numConta = numConta;
 		this.nomeTitular = nomeTitular;
 		if (respDeposito == 's' || respDeposito == 'S') {
 			this.deposito = valorDeposito();
 		}
-		
-	}
-	
-	public Banco(int numConta, String nomeTitular) {
-		this.numConta = numConta;
-		this.nomeTitular = nomeTitular;
 	}
 	
 	public double valorDeposito() {
 		Locale.setDefault(Locale.US);
-		System.out.print("Valor do depósito R$: ");
+		System.out.print("Depositar valor R$: ");
 		double valor = scan.nextDouble();
 		return valor;
 	} 
@@ -50,18 +43,21 @@ public class Banco {
 	
 	public void setDeposito(double deposito) {
 		this.deposito = deposito;
-		
 	}
 	
 	public void addDeposito (double deposito) {
 		this.deposito += deposito;
+		System.out.printf("Número da conta: %d | Titular: %s | Saldo adicionado: R$: %.2f%n", getNumConta(), getNomeTitular(), getDeposito());
 	}
 	
 	public void removeDeposito (double deposito) {
-		 if (this.deposito >= deposito) {
-		        this.deposito -= deposito;
-		    } else {
-		        System.out.println("Saldo insuficiente!");
-		    }
+		this.deposito -= deposito;
+		System.out.printf("Número da conta: %d | Titular: %s | Saldo disponível: R$: %.2f%n", getNumConta(), getNomeTitular(), getDeposito());
 	}
+	
+	public void exibirSaldo() {
+		System.out.printf("%nNúmero da conta: %d | Titular: %s | Saldo atual R$: %.2f%n", getNumConta(), getNomeTitular(), getDeposito());
+	}
+	
+	
 }
