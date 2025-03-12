@@ -47,12 +47,11 @@ public class Banco {
 	
 	public void addDeposito (double deposito) {
 		this.deposito += deposito;
-		System.out.printf("Número da conta: %d | Titular: %s | Saldo adicionado: R$: %.2f%n", getNumConta(), getNomeTitular(), getDeposito());
 	}
 	
 	public void removeDeposito (double deposito) {
 		this.deposito -= deposito;
-		System.out.printf("Número da conta: %d | Titular: %s | Saldo disponível: R$: %.2f%n", getNumConta(), getNomeTitular(), getDeposito());
+		this.deposito -= 5.00;
 	}
 	
 	public void exibirSaldo() {

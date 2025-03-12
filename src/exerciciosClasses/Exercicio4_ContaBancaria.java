@@ -28,10 +28,12 @@ public class Exercicio4_ContaBancaria {
 		System.out.print("\nAdicionar saldo R$: ");
 		double addValor = scan.nextDouble();
 		rayssa.addDeposito(addValor);
+		rayssa.exibirSaldo();
 		
 		System.out.print("\nRemover saldo R$: ");
 		double removeValor = scan.nextDouble();
 		rayssa.removeDeposito(removeValor);
+		rayssa.exibirSaldo();
 		
 		scan.close();
 
