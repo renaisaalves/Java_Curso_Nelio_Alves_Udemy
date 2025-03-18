@@ -6,13 +6,11 @@ public class Descontos {
 	private double salarioBruto;
 	private String tipoRegime;
 	private double salarioLiquido;
-	public int aliquotaContribuicao;
-	private double descontoAliquota;
-	public int aliquotaIR;
-	private double descontoIR;
+	public double salarioMinimo = 1518.00;
+	private double impostoContribuicao;
+	private double impostoRenda;
 	
 	public Descontos() {
-		
 	}
 	
 	public Descontos(String nome, double salarioBruto, String tipoRegime) {
@@ -45,34 +43,40 @@ public class Descontos {
 		return salarioLiquido;
 	}
 	
-	public int getAliquotaContribuicao() {
-		return aliquotaContribuicao;
+	public double getSalarioMinimo() {
+		return salarioMinimo;
 	}
 	
-	public void setAliquotaContribuicao(int aliquotaContribuicao) {
-		this.aliquotaContribuicao = aliquotaContribuicao;
+	public void setSalarioMinimo(double salarioMinimo) {
+		this.salarioMinimo = salarioMinimo;
 	}
 	
-	public double getDescontoAliquota() {
-		return descontoAliquota;
-	}
-	
-	public int getAliquotaIR() {
-		return aliquotaIR;
-	}
-	
-	public void setAliquotaIR(int aliquotaIR) {
-		this.aliquotaIR = aliquotaIR;
-	}
-	
-	public double getDescontoIR() {
-		return descontoIR;
-	}
-	
-	public void setDescontoIR(double descontoIR) {
-		this.descontoIR = descontoIR;
+	public double getImpostoContribuicao() {
+		return impostoContribuicao;
 	}
 
+	public double getImpostoRenda() {
+		return impostoRenda;
+	}
+	//MÉTODOS
+	
+	public double impostoContribuicao() {
+		if (tipoRegime == "CLT") {
+			
+		} else if (tipoRegime == "ESTATUTARIO") {
+			
+		} else {
+			
+		}
+	return impostoContribuicao;
+	}
+	
+	public double impostoRenda() {
+		if (salarioBruto <= 1903.98) {
+			impostoRenda = 0.0;
+		}
+	return impostoRenda;
+	}
 }
 
 

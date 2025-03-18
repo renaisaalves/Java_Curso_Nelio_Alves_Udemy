@@ -15,13 +15,22 @@ public class CalculoDescontos {
 		System.out.println("CALCULADORA DE DESCONTOS\n");
 		System.out.print("Nome: ");
 		String nome = scan.nextLine();
-		scan.next();
-		System.out.print("Salário bruto mensal R$: ");
+		System.out.print("Salário bruto mensal: R$ ");
 		double salarioBruto = scan.nextDouble();
 		System.out.print("Tipo de regime: ");
-		String tipoRegime = scan.next();
+		String tipoRegime = scan.next().toUpperCase();
 		
-		Descontos desconto = new Descontos(nome, salarioBruto, tipoRegime);
+		Descontos pessoa = new Descontos(nome, salarioBruto, tipoRegime);
+		
+		System.out.println("\nNome: " + pessoa.getNome());
+		System.out.println("Salário Bruto: R$" + pessoa.getSalarioBruto());
+		System.out.println("Tipo de regime: " + pessoa.getTipoRegime());
+		System.out.printf("Imposto de contribuição: R$ %n");
+		System.out.println("Imposto de Renda: R$ ");
+		System.out.println("Salário Líquido: R$");
+		
+	
+		
 
 		
 		
