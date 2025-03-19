@@ -26,7 +26,8 @@ public class CalculoDescontos {
 		System.out.println("Salário Bruto: R$" + pessoa.getSalarioBruto());
 		System.out.println("Tipo de regime: " + pessoa.getTipoRegime());
 		System.out.printf("Imposto de contribuição: R$ %n");
-		System.out.println("Imposto de Renda: R$ ");
+		System.out.printf("Imposto de Renda: R$ %.2f%n", pessoa.impostoRenda());
+		System.out.println("Percentual da alíquota IR: " + pessoa.aliquotaIR);
 		System.out.println("Salário Líquido: R$");
 		
 	

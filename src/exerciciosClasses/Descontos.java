@@ -9,6 +9,7 @@ public class Descontos {
 	public double salarioMinimo = 1518.00;
 	private double impostoContribuicao;
 	private double impostoRenda;
+	public double aliquotaIR;
 	
 	public Descontos() {
 	}
@@ -68,14 +69,23 @@ public class Descontos {
 		} else {
 			
 		}
+		
 	return impostoContribuicao;
 	}
 	
 	public double impostoRenda() {
 		if (salarioBruto <= 1903.98) {
-			impostoRenda = 0.0;
+			aliquotaIR = 0.0;
+		} else if (salarioBruto >= 1903.99 && salarioBruto <= 2826.65) {
+			aliquotaIR = 7.5;
+		} else if (salarioBruto >= 2826.66 && salarioBruto <= 3751.05) {
+			aliquotaIR = 15.0;
+		} else if (salarioBruto >= 3751.06 && salarioBruto <=  4664.68) {
+			aliquotaIR = 22.5;
+		} else {
+			aliquotaIR = 27.0;
 		}
-	return impostoRenda;
+	return impostoRenda = aliquotaIR * salarioBruto / 100;
 	}
 }
 
